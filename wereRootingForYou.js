@@ -1,11 +1,11 @@
 function judgeVegetable(vegetables, metric){
   let highest = vegetables[0];
   for(let vegetable of vegetables){
-    if (vegetable[metric] > highest.metric){
+    if (vegetable[metric] > highest[metric]){
       highest = vegetable;
     }
   }
-  return highest.submitter
+  return highest.submitter;
 }
 
 const vegetables = [
@@ -27,5 +27,4 @@ const vegetables = [
 ]
 
 const metric = 'redness'
-
 console.log(judgeVegetable(vegetables, metric))
